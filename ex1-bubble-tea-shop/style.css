@@ -1,5 +1,60 @@
 body {
-  font-family: "Kanit";
+  font-family: "Kanit", sans-serif;
 }
 
 /* Start coding here */
+.bubble-tea-card {
+  position: relative;
+  width: 640px;
+  max-width: 95vw;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bubble-tea-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.bubble-tea-card__location {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.bubble-tea-card__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.35) 45%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.bubble-tea-card__title {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
