@@ -1,1 +1,110 @@
 /* Start coding here */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sarabun", sans-serif;
+}
+
+.chatroom {
+  width: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.chatroom__header {
+  margin: 0;
+  padding: 14px 18px;
+  background-color: #878787;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.chatroom__body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 18px 26px;
+  background-color: #f5f5f5;
+}
+
+.chat-row {
+  display: flex;
+  width: 100%;
+}
+
+.chat-row--left {
+  justify-content: flex-start;
+}
+
+.chat-row--right {
+  justify-content: flex-end;
+}
+
+.chat-bubble {
+  position: relative;
+  display: inline-block;
+  max-width: 85%;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.chat-bubble--gray {
+  background-color: #aeaeae;
+}
+
+.chat-bubble--green {
+  background-color: #9fe29f;
+}
+
+.chat-bubble--light {
+  background-color: #dddddd;
+}
+
+/* หางกล่องข้อความสีเขียว — Positioned Layout */
+.chat-bubble--tail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 14px 14px 0;
+  border-color: transparent #9fe29f transparent transparent;
+  transform: translate(40%, -55%);
+}
+
+/* ปุ่ม x ทับกล่องสีเทาอ่อน — Positioned Layout */
+.chat-bubble__close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #a8a8a8;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.chat-bubble__close i {
+  font-size: 11px;
+}
